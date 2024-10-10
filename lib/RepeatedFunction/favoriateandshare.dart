@@ -7,7 +7,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../database/NoteDbHelper.dart';
 
-// Widget addtofavoriate(id, type, Details, context) {}
+
 
 class addtofavoriate extends StatefulWidget {
   var id, type, Details;
@@ -32,7 +32,7 @@ class _addtofavoriateState extends State<addtofavoriate> {
         print('notanythingfound');
         favoriatecolor = Colors.white;
       } else {
-        //print the tmdbname and tmdbid and tmdbtype and tmdbrating from database
+
 
         print('surelyfound');
         favoriatecolor = Colors.red;
@@ -138,7 +138,6 @@ class _addtofavoriateState extends State<addtofavoriate> {
           ),
           GestureDetector(
             onTap: () {
-              //show dialog box with share option and copy link option and share to social media option and copy link option and share to social media option
               showDialog(
                   context: context,
                   builder: (context) {

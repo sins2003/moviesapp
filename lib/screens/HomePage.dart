@@ -59,7 +59,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         }
       }
     }
-
   }
 
   @override
@@ -83,8 +82,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         body: CustomScrollView(physics: BouncingScrollPhysics(), slivers: [
           SliverAppBar(
               backgroundColor: Color.fromRGBO(18, 18, 18, 0.9),
-              title:
-                  Row(
+              title: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Trending ',
@@ -136,7 +134,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                           setState(() {
                             trendingweek.clear();
                             uval = int.parse(value.toString());
-                            // trendinglist(uval);
                           });
                         },
                       ),
@@ -263,7 +260,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   },
                 ),
               )),
-          //////////////////////////////////////////////End of Flexible bar///////////////////////////////////////////////////////////////
+
           SliverList(
               delegate: SliverChildListDelegate([
             searchbarfun(),
@@ -280,9 +277,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                       labelColor: Colors.orange,
                       controller: _tabController,
                       indicatorColor: Colors.white,
-                      // indicator: BoxDecoration(
-                      //     borderRadius: BorderRadius.circular(15),
-                      //     color: Colors.amber.withOpacity(0.4)),
                       tabs: [
                         Tab(child: Tabbartext('Tv Series')),
                         Tab(child: Tabbartext('Movies')),

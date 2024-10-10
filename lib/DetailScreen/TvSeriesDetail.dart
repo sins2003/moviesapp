@@ -47,9 +47,7 @@ class _TvSeriesDetailsState extends State<TvSeriesDetails> {
     var seriestrailersurl = 'https://api.themoviedb.org/3/tv/' +
         widget.id.toString() +
         '/videos?api_key=$apikey';
-    // 'https://api.themoviedb.org/3/tv/' +
-    //     widget.id.toString() +
-    //     '/videos?api_key=$apikey';
+
 
     var tvseriesdetailresponse = await http.get(Uri.parse(tvseriesdetailurl));
     if (tvseriesdetailresponse.statusCode == 200) {
@@ -82,7 +80,7 @@ class _TvSeriesDetailsState extends State<TvSeriesDetails> {
         });
       }
     } else {}
-    ///////////////////////////////////////////tvseries review///////////////////////////////////////////
+
 
     var tvseriesreviewresponse = await http.get(Uri.parse(tvseriesreviewurl));
     if (tvseriesreviewresponse.statusCode == 200) {
@@ -110,7 +108,7 @@ class _TvSeriesDetailsState extends State<TvSeriesDetails> {
         });
       }
     } else {}
-    ///////////////////////////////////////////similar series
+
 
     var similarseriesresponse = await http.get(Uri.parse(similarseriesurl));
     if (similarseriesresponse.statusCode == 200) {
@@ -125,7 +123,7 @@ class _TvSeriesDetailsState extends State<TvSeriesDetails> {
         });
       }
     } else {}
-    ///////////////////////////////////////////recommend series
+
 
     var recommendseriesresponse = await http.get(Uri.parse(recommendseriesurl));
     if (recommendseriesresponse.statusCode == 200) {
@@ -141,7 +139,7 @@ class _TvSeriesDetailsState extends State<TvSeriesDetails> {
       }
     } else {}
 
-    ///////////////////////////////////////////tvseries trailer///////////////////////////////////////////
+
     var tvseriestrailerresponse = await http.get(Uri.parse(seriestrailersurl));
     if (tvseriestrailerresponse.statusCode == 200) {
       var tvseriestrailerdata = jsonDecode(tvseriestrailerresponse.body);
@@ -164,7 +162,7 @@ class _TvSeriesDetailsState extends State<TvSeriesDetails> {
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
         overlays: [SystemUiOverlay.bottom]);
-    // SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,

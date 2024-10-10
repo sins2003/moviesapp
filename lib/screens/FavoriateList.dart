@@ -84,7 +84,6 @@ class _FavoriateMoviesState extends State<FavoriateMovies> {
             padding: const EdgeInsets.all(8.0),
             child: Container(
               height: MediaQuery.of(context).size.height * 0.8,
-              //query all data from database and show in listview builder here
               child: FutureBuilder(
                 future: SortByChecker(svalue),
                 builder: (context,

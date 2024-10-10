@@ -17,7 +17,6 @@ class _TvSeriesState extends State<TvSeries> {
   List<Map<String, dynamic>> populartvseries = [];
   List<Map<String, dynamic>> topratedtvseries = [];
   List<Map<String, dynamic>> onairtvseries = [];
-  // String apikey = "e3ec470868f0e63566068d6c8657500d";
   var populartvseriesurl =
       'https://api.themoviedb.org/3/tv/popular?api_key=$apikey';
   var topratedtvseriesurl =
@@ -26,7 +25,7 @@ class _TvSeriesState extends State<TvSeries> {
       'https://api.themoviedb.org/3/tv/on_the_air?api_key=$apikey';
 
   Future<void> tvseriesfunction() async {
-    /////////////////////////////////////////////
+
     var populartvresponse = await http.get(Uri.parse(populartvseriesurl));
     if (populartvresponse.statusCode == 200) {
       var tempdata = jsonDecode(populartvresponse.body);
@@ -43,7 +42,7 @@ class _TvSeriesState extends State<TvSeries> {
     } else {
       print(populartvresponse.statusCode);
     }
-    /////////////////////////////////////////////
+
     var topratedtvresponse = await http.get(Uri.parse(topratedtvseriesurl));
     if (topratedtvresponse.statusCode == 200) {
       var tempdata = jsonDecode(topratedtvresponse.body);
@@ -60,7 +59,7 @@ class _TvSeriesState extends State<TvSeries> {
     } else {
       print(topratedtvresponse.statusCode);
     }
-    /////////////////////////////////////////////
+
     var onairtvresponse = await http.get(Uri.parse(onairtvseriesurl));
     if (onairtvresponse.statusCode == 200) {
       var tempdata = jsonDecode(onairtvresponse.body);
@@ -77,7 +76,7 @@ class _TvSeriesState extends State<TvSeries> {
     } else {
       print(onairtvresponse.statusCode);
     }
-    /////////////////////////////////////////////
+
   }
 
   @override

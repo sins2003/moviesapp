@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 import 'package:moviesapp2/RepeatedFunction/repttext.dart';
 import '../DetailScreen/MovieDetails.dart';
 import '../DetailScreen/TvSeriesDetail.dart';
@@ -85,6 +85,4 @@ Widget sliderlist(
   ]);
 }
 
-////////////////////////////////////////////////////////////////////////////
-/////////////////////////// Drawer ///////////////////////////
-////////////////////////////////////////////////////////////////////////////
+

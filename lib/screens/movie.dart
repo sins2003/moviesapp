@@ -28,7 +28,6 @@ class _MovieState extends State<Movie> {
         'https://api.themoviedb.org/3/movie/top_rated?api_key=$apikey';
     var latestmoviesurl =
         'https://api.themoviedb.org/3/movie/latest?api_key=$apikey';
-    /////////////////////////////////
     var popularmoviesresponse = await http.get(Uri.parse(popularmoviesurl));
     if (popularmoviesresponse.statusCode == 200) {
       var tempdata = jsonDecode(popularmoviesresponse.body);
@@ -45,7 +44,6 @@ class _MovieState extends State<Movie> {
     } else {
       print(popularmoviesresponse.statusCode);
     }
-    /////////////////////////////////////////////
     var nowplayingmoviesresponse =
         await http.get(Uri.parse(nowplayingmoviesurl));
     if (nowplayingmoviesresponse.statusCode == 200) {
@@ -63,7 +61,7 @@ class _MovieState extends State<Movie> {
     } else {
       print(nowplayingmoviesresponse.statusCode);
     }
-    /////////////////////////////////////////////
+
     var topratedmoviesresponse = await http.get(Uri.parse(topratedmoviesurl));
     if (topratedmoviesresponse.statusCode == 200) {
       var tempdata = jsonDecode(topratedmoviesresponse.body);

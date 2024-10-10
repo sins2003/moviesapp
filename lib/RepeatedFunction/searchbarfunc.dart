@@ -16,7 +16,6 @@ class searchbarfun extends StatefulWidget {
 }
 
 class _searchbarfunState extends State<searchbarfun> {
-  ////////////////////////////////search bar function/////////////////////////////////////////////
   List<Map<String, dynamic>> searchresult = [];
 
   Future<void> searchlistfunction(val) async {
@@ -27,7 +26,7 @@ class _searchbarfunState extends State<searchbarfun> {
       var tempdata = jsonDecode(searchresponse.body);
       var searchjson = tempdata['results'];
       for (var i = 0; i < searchjson.length; i++) {
-        //only add value if all are present
+
         if (searchjson[i]['id'] != null &&
             searchjson[i]['poster_path'] != null &&
             searchjson[i]['vote_average'] != null &&
@@ -41,7 +40,7 @@ class _searchbarfunState extends State<searchbarfun> {
             'overview': searchjson[i]['overview'],
           });
 
-          // searchresult = searchresult.toSet().toList();
+
 
           if (searchresult.length > 20) {
             searchresult.removeRange(20, searchresult.length);
@@ -57,7 +56,7 @@ class _searchbarfunState extends State<searchbarfun> {
   bool showlist = false;
   var val1;
 
-  ////////////////////////////////search bar function/////////////////////////////////////////////
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -137,7 +136,7 @@ class _searchbarfunState extends State<searchbarfun> {
                 height: 5,
               ),
 
-              //if textfield has focus and search result is not empty then display search result
+
 
               searchtext.text.length > 0
                   ? FutureBuilder(
@@ -206,8 +205,8 @@ class _searchbarfunState extends State<searchbarfun> {
                                                               MainAxisAlignment
                                                                   .spaceBetween,
                                                           children: [
-                                                        ///////////////////////
-                                                        //media type
+
+
                                                         Container(
                                                           alignment: Alignment
                                                               .topCenter,
@@ -219,7 +218,7 @@ class _searchbarfunState extends State<searchbarfun> {
                                                         Container(
                                                           child: Row(
                                                             children: [
-                                                              //vote average box
+
                                                               Container(
                                                                 padding:
                                                                     EdgeInsets

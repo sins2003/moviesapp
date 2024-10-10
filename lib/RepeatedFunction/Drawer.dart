@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:url_launcher/url_launcher.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import '../screens/FavoriateList.dart';
-import 'repttext.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:io';
-import 'package:fluttertoast/fluttertoast.dart';
 
 class drawerfunc extends StatefulWidget {
   drawerfunc({
@@ -22,27 +19,27 @@ class drawerfunc extends StatefulWidget {
 class _drawerfuncState extends State<drawerfunc> {
   File? _image;
 
-  Future<void> SelectImage() async {
-    // final pickedfile =
-    //     await ImagePicker().(source: ImageSource.gallery);
-    // if (pickedfile != null) {
-    //   CroppedFile? cropped = await ImageCropper().cropImage(
-    //     sourcePath: pickedfile.path,
-    //     aspectRatioPresets: [
-    //       CropAspectRatioPreset.square,
-    //       CropAspectRatioPreset.ratio3x2,
-    //       CropAspectRatioPreset.original,
-    //       CropAspectRatioPreset.ratio4x3,
-    //       CropAspectRatioPreset.ratio16x9
-    //     ],
-    //   );
-    //   SharedPreferences sp = await SharedPreferences.getInstance();
-    //   sp.setString('imagepath', cropped!.path);
-    //   _image = cropped as File?;
-    // } else {
-    //   print('No image selected.');
-    // }
-  }
+  // Future<void> SelectImage() async {
+  //   // final pickedfile =
+  //   //     await ImagePicker().(source: ImageSource.gallery);
+  //   // if (pickedfile != null) {
+  //   //   CroppedFile? cropped = await ImageCropper().cropImage(
+  //   //     sourcePath: pickedfile.path,
+  //   //     aspectRatioPresets: [
+  //   //       CropAspectRatioPreset.square,
+  //   //       CropAspectRatioPreset.ratio3x2,
+  //   //       CropAspectRatioPreset.original,
+  //   //       CropAspectRatioPreset.ratio4x3,
+  //   //       CropAspectRatioPreset.ratio16x9
+  //   //     ],
+  //   //   );
+  //   //   SharedPreferences sp = await SharedPreferences.getInstance();
+  //   //   sp.setString('imagepath', cropped!.path);
+  //   //   _image = cropped as File?;
+  //   // } else {
+  //   //   print('No image selected.');
+  //   // }
+  // }
 
   @override
   void initState() {
@@ -66,29 +63,6 @@ class _drawerfuncState extends State<drawerfunc> {
               child: Container(
                 child: Column(
                   children: [
-                    // GestureDetector(
-                    //   onTap: () async {
-                    //     await SelectImage();
-                    //     //toast message
-                    //     Fluttertoast.showToast(
-                    //         msg: "Image Changed",
-                    //         toastLength: Toast.LENGTH_SHORT,
-                    //         gravity: ToastGravity.BOTTOM,
-                    //         timeInSecForIosWeb: 1,
-                    //         backgroundColor: Colors.grey,
-                    //         textColor: Colors.white,
-                    //         fontSize: 16.0);
-                    //   },
-                    //   child: _image == null
-                    //       ? CircleAvatar(
-                    //           radius: 50,
-                    //           backgroundImage: AssetImage('assets/user.png'),
-                    //         )
-                    //       : CircleAvatar(
-                    //           radius: 50,
-                    //           backgroundImage: FileImage(_image!),
-                    //         ),
-                    // ),
                     SizedBox(height: 10),
                     Text(
                       'Welcome',

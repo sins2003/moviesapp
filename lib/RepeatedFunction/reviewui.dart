@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:moviesapp2/RepeatedFunction/repttext.dart';
-// import 'package:url_launcher/url_launcher.dart';
 
 class ReviewUI extends StatefulWidget {
   List revdeatils = [];
@@ -71,7 +70,7 @@ class _ReviewUIState extends State<ReviewUI> {
             ),
           ),
           //
-          //show only one review
+
           showall == true
               ? Container(
                   height: MediaQuery.of(context).size.height * 0.65,
@@ -293,4 +292,3 @@ class _ReviewUIState extends State<ReviewUI> {
   }
 }
 
-// Widget ReviewUII(context, List REviewDetails) {}
